@@ -91,7 +91,7 @@ resource/layout/overlaydashboard_lores.layout
 	layout
 	{
 		//Links
-		place { control="TaskbarPanel" align=right width=500 height=115 }
+		place { control="TaskbarPanel" height=70 align=bottom margin-left=-290 margin-top=10 margin-bottom=10 }
 
 		//Battery Indicator
 		region { name="powermeter" align=bottom width=max height=110 margin-bottom=45 }

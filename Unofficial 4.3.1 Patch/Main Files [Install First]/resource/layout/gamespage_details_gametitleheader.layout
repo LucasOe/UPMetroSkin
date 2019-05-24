@@ -3,7 +3,6 @@
 	controls
 	{
 		gametitlelabel { controlname="Label" style="headertextlarge" labeltext="" }
-		iconimage { controlname="ImagePanel" style="gameicon" }
 	}
 
 	colors
@@ -19,11 +18,11 @@
 		}
 		headertextlarge
 		{
+			inset-bottom=4
 			textcolor=titleGame
 			font-family=light
 			font-weight=100
 			bgcolor=bgTitleGame
-			padding-bottom=3
 			padding-left=2
 			padding-right=4
 		}
@@ -31,6 +30,15 @@
 
 	layout
 	{
-		place { control=iconimage,gametitlelabel align=left-center spacing=10 }
+		place {
+			control=gametitlelabel
+			align=top-center
+			height=max
+		}
+		place {
+			control=iconimage
+			width=0
+			height=0
+		}
 	}
 }

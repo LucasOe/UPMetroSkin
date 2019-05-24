@@ -4,13 +4,17 @@
 	{
 		"grid"
 		{
-			"alignment"						"justify"		// left, right, justify 
-			"interiorspacing"				18				// minimum interitem spacing, used for both x and y
-			"wheelpct"						50				// mouse wheel -> scroll this percent of an item's dy
+			"alignment"						"justify"		// left, right, justify
+			"interiorspacing"			18					// minimum interitem spacing, used for both x and y
+			"wheelpct"						50					// mouse wheel -> scroll this percent of an item's dy
 			"tabposition"					1
 		}
 
-		"emptylisttext" { control="RichText" style="emptylisttext" }
+		"emptylisttext"
+		{
+			control="RichText"
+			style="emptylisttext"
+		}
 	}
 
 	// random/generic settings go in "colors"
@@ -24,24 +28,31 @@
 		// value defining the extra vertical distance to leave below
 		// the picture for drop shadow room, in px. This value should
 		// match the margin values in the layout statements in the gamespage_grid_*.layout files.
-		GridView.DropShadowLeading "10"  //KEEP THIS THE SAME AS THE DEFAULT STEAM OR ZOOM WON'T BE SAVED
+		GridView.DropShadowLeading "0"
 	}
 
 	styles
 	{
+		"RichText"
+		{
+			font-size=36
+		}
+
 		WrapPanel
 		{
-			inset="1 0 0 2"
+			inset-right=0
 			bgcolor="none"
-			render_bg {}
 			render {}
+			render_bg {}
 		}
 
 		emptylisttext
 		{
 			textcolor="White"
+			font-size="15"
 			render_bg {}
 		}
+
 		// GameItem_whatever suffix is computed on the fly. (not case sensitive.) possible values:
 		// shortcut
 		// mod
@@ -50,12 +61,48 @@
 		// installed
 		// updating
 		// uninstalled
-		// notinstalled (yes there are two)
+		// notinstalled
+
+		GameItem_installed
+		{
+			alpha = 255
+		}
+		GameItem_unInstalled
+		{
+			alpha = 127
+		}
+		GameItem_shortcut
+		{
+			alpha = 127
+		}
+		GameItem_updating
+		{
+			render
+			{
+				0="fill( x0, y0, x1, y1, updating)"
+			}
+		}
+
 	}
 
 	layout
 	{
-		place {	control=grid x=1 y=1 width=max height=max }
-		place { control=emptylisttext x=0 y=0 margin-left=8 margin-top=1 width=max height=max }
+		place
+		{
+			control = grid
+			x=0
+			y=0
+			width=max
+			height=max
+		}
+
+		place
+		{
+			control = emptylisttext
+			x=0
+			y=0
+			width=max
+			height=max
+		}
 	}
 }

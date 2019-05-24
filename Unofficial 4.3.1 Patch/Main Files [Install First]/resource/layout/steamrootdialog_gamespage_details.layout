@@ -129,7 +129,7 @@
 		place	{ control=emptylisttext y=1 width=max height=max margin-left=8 }
 
 		//Header
-		place 	{ control=gametitleheader region=headertext width=max height=144 dir=down margin-left=10 }
+		place 	{ control=gametitleheader region=headertext width=max height=120 dir=down margin-left=10 }
 
 		//Panels
 		region  { name="detailsbody" region=details y=144 width=max margin-right=170 overflow=allow-vertical }
@@ -141,8 +141,9 @@
 		place { control=linkslabel,sendguestpasslink,gamehublink,achievementslink,forumlink,ogglink,manuallink,editconfiglink,newslink,storelink,dlclink,cdkeylink,guidelink,guideslink,supportlink,recommendlink,tagslabel,edittagslink,*taglink region=rightcolumn dir=down height=32 width=max }
 
 		//Background Images
-		place 	{ control=headerimagea align=left margin-left=262 height=550 width=1024 }
-		place 	{ control=headerimageb align=left margin-left=262 height=550 width=1024 }
+		//Remove the comment to enable screenshots as background images
+		//place 	{ control=headerimagea align=left margin-left=262 height=550 width=1024 }
+		//place 	{ control=headerimageb align=left margin-left=262 height=550 width=1024 }
 
 		//?
 		place 	{ control=DetailsBorder y=1 x=1 width=max height=max }

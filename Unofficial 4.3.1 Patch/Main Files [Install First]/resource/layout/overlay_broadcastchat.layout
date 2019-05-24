@@ -69,6 +69,33 @@
 			image="graphics/tab_close_hov"
 		}
 
+		Button
+		{
+			bgcolor=TextEntry
+			render_bg{}
+			image="graphics/metro/icons/chat/send"
+			padding-left=4
+		}
+		Button:hover
+		{
+			bgcolor="TextEntry"
+			render_bg
+			{
+				0="fill(x0,y0,x1,y1,white05)"
+			}
+		}
+		Button:active
+		{
+			bgcolor=Focus
+			render_bg{}
+		}
+		Button:disabled
+		{
+			bgcolor=TextEntry
+			render_bg{}
+			image="graphics/metro/icons/chat/send_d"
+		}
+
 		CEmoticonButton
 		{
 			bgcolor=TextEntry
@@ -108,13 +135,6 @@
 			font-family=semibold
 			font-style=uppercase
 		}
-
-		//Hidden
-		button
-		{
-			textcolor="none"
-			bgcolor="none"
-		}
 	}
 
 	layout
@@ -125,9 +145,7 @@
 		region { name=bottom align=bottom height=40 }
 
 		place { control="TextEntry" region=bottom height=max width=max end-right=EmoticonButton }
-		place { control="EmoticonButton" region=bottom height=max width=40 align=right margin-right=1 }
+		place { control="EmoticonButton,SendButton" region=bottom height=max width=40 align=right margin-right=1 }
 		place { control="StatusLabel" region=bottom1 height=25 }
-
-		place { control="SendButton" width=1 align=right }
 	}
 }

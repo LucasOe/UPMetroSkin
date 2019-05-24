@@ -4,7 +4,7 @@ steam.styles
 	include "custom.styles"
 
 	include [$WIN32||$WINDOWS||$OSX||$OSX1010] "resource/styles/windows.styles"
-	
+
 	include "controls.styles"
 	include "UI.styles"
 	include "caption.styles"
@@ -330,7 +330,7 @@ steam.styles
 			render_bg{}
 			padding-left=16
 			padding-right=100
-			minimum-height=1200
+			minimum-height=1150
 		}
 		"CGameLaunchParametersDialog FrameTitle"
 		{
@@ -1151,7 +1151,7 @@ steam.styles
 			font-family=basefont
 			font-style=underline
 			font-weight=400
-			bgcolor="none"
+			bgcolor= "none"
 		}
 
 		URLLabel:Hover
@@ -1205,7 +1205,7 @@ steam.styles
 			font-family=basefont
 			font-weight=400
 			selectedbgcolor="Focus"
-			bgcolor="none"
+			bgcolor= "none"
 			render_bg {}
 			inset="1 -1 1 1"
 		}
@@ -1439,7 +1439,7 @@ steam.styles
 		{
 			bgcolor=bgPanel
 		}
-		nonsteamdetails 
+		nonsteamdetails
 		{
 			bgcolor=bgPanel
 			minimum-height=68
